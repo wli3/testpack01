@@ -1,0 +1,14 @@
+{
+  "runtimes": {
+    "osx-x64": {
+      "Microsoft.NETCore.DotNetHostPolicy": {
+        "runtime.osx-x64.testappridsplit": "1.0.0"
+      }
+    },
+    "win-x64": {
+      "Microsoft.NETCore.DotNetHostPolicy": {
+        "runtime.win-x64.testappridsplit": "1.0.0"
+      }
+    }
+  }
+}
