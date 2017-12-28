@@ -4,11 +4,11 @@
     <OutputType>Exe</OutputType>
     <TargetFramework>netcoreapp2.0</TargetFramework>
     <PackageId>runtime.osx-x64.testappridsplit</PackageId>
-    <Runtime>runtime.osx-x64</Runtime>
+    <RuntimeIdentifier>osx-x64</RuntimeIdentifier>
     <TargetsForTfmSpecificContentInPackage>$(TargetsForTfmSpecificContentInPackage);PackTool</TargetsForTfmSpecificContentInPackage>
   </PropertyGroup>
 
-  <Target Name="PackTool" DependsOnTargets="Publish" Condition=" '$(PackAsTool)' == 'true' ">
+  <Target Name="PackTool" DependsOnTargets="Publish">
     <ItemGroup>
       <!--TODO wul do not glob-->
       <TfmSpecificPackageFiles Include="$(PublishDir)/**/*.*"/>
