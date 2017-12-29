@@ -16,7 +16,7 @@
     <!--All published file in different tools/tfm-->
     <ItemGroup>
       <TfmSpecificPackageFile Include="@(TfmSpecificPackageFiles)">
-        <PackagePath>runtimes/$(RuntimeIdentifier)</PackagePath>
+        <PackagePath>tools/any/any</PackagePath>
       </TfmSpecificPackageFile>
     </ItemGroup>
   </Target>
