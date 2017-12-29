@@ -1,0 +1,24 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+    <PackageId>runtime.win-x64.testappridsplit</PackageId>
+    <RuntimeIdentifier>win-x64</RuntimeIdentifier>
+    <TargetsForTfmSpecificContentInPackage>$(TargetsForTfmSpecificContentInPackage);PackTool</TargetsForTfmSpecificContentInPackage>
+  </PropertyGroup>
+
+  <Target Name="PackTool" DependsOnTargets="Publish">
+    <ItemGroup>
+      <!--TODO wul do not glob-->
+      <TfmSpecificPackageFiles Include="$(PublishDir)/**/*.*"/>
+    </ItemGroup>
+    <!--All published file in different tools/tfm-->
+    <ItemGroup>
+      <TfmSpecificPackageFile Include="@(TfmSpecificPackageFiles)">
+        <PackagePath>runtimes/$(RuntimeIdentifier)</PackagePath>
+      </TfmSpecificPackageFile>
+    </ItemGroup>
+  </Target>
+
+</Project>
