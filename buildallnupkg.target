@@ -4,11 +4,11 @@
   </PropertyGroup>
 
   <Target Name="BuildAllNupkg" BeforeTargets="Build">
-    <MSBuild BuildInParallel="False" Projects="runtime.osx-x64.testappridsplit/testappridsplit.csproj" Targets="Pack" Properties="PackageOutputPath=$(PackageOutputPath)">
+    <MSBuild BuildInParallel="False" Projects="runtime.osx-x64.testappridsplit/testappridsplit.csproj" Targets="Restore;Pack" Properties="PackageOutputPath=$(PackageOutputPath)">
     </MSBuild>
-    <MSBuild BuildInParallel="False" Projects="runtime.win-x64.testappridsplit/testappridsplit.csproj" Targets="Pack" Properties="PackageOutputPath=$(PackageOutputPath)">
+    <MSBuild BuildInParallel="False" Projects="runtime.win-x64.testappridsplit/testappridsplit.csproj" Targets="Restore;Pack" Properties="PackageOutputPath=$(PackageOutputPath)">
     </MSBuild>
-    <MSBuild BuildInParallel="False" Projects="testappridsplit/testappridsplit.csproj" Targets="Pack" Properties="PackageOutputPath=$(PackageOutputPath)" >
+    <MSBuild BuildInParallel="False" Projects="testappridsplit/testappridsplit.csproj" Targets="Restore;Pack" Properties="PackageOutputPath=$(PackageOutputPath)" >
     </MSBuild>
   </Target>
 </Project>
