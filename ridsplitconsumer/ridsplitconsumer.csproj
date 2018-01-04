@@ -5,6 +5,7 @@
     <TargetFramework>netcoreapp2.0</TargetFramework>
     <RestorePackagesPath>RestoredPackages</RestorePackagesPath>
     <RuntimeIdentifier>win-x64</RuntimeIdentifier>
+    <DisableImplicitFrameworkReferences>true</DisableImplicitFrameworkReferences>
   </PropertyGroup>
 
   <ItemGroup>
