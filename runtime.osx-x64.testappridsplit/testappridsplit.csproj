@@ -5,7 +5,6 @@
     <TargetFramework>netcoreapp2.0</TargetFramework>
     <PackageId>runtime.osx-x64.testappridsplit</PackageId>
     <RuntimeIdentifier>osx-x64</RuntimeIdentifier>
-    <DisableImplicitFrameworkReferences>true</DisableImplicitFrameworkReferences>
     <TargetsForTfmSpecificContentInPackage>$(TargetsForTfmSpecificContentInPackage);PackTool</TargetsForTfmSpecificContentInPackage>
     <packageType>DotnetTool</packageType>
   </PropertyGroup>
